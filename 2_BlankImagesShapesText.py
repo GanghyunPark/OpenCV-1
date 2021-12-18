@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 # 512, 512, 3 의 빈 uint8 상태의 array 생성
-img = np.zeros((512, 512, 3), np.uint8)
+img = np.zeros((512, 510, 3), np.uint8)
 
-print(img)
+print(img.shape)
 # BGR 순 이며, img[] 내부는 height와 width 순
 #img[20:30, 60:100] = 255, 0, 0
 
