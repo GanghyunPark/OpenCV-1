@@ -11,5 +11,5 @@ while True:
     img = cv2.resize(img, (frameWidth, frameHeight))
     cv2.imshow("Video", img)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(0) & 0xFF == ord('q'):
         break
