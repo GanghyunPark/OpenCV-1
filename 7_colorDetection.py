@@ -31,6 +31,7 @@ while True:
     # HSV(Hue, Saturation, value)
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
+    # 트랙바를 생성
     h_min = cv2.getTrackbarPos("HUE Min", "HSV")
     h_max = cv2.getTrackbarPos("HUE Max", "HSV")
     s_min = cv2.getTrackbarPos("SAT Min", "HSV")
@@ -38,6 +39,7 @@ while True:
     v_min = cv2.getTrackbarPos("VALUE Min", "HSV")
     v_max = cv2.getTrackbarPos("VALUE Max", "HSV")
 
+    # 트랙바가 mask에서 작동할 수 있도록 조정 및 result에서 mask와 img가 동시에 보일수 있도록 함
     lower = np.array([h_min, s_min, v_min])
     upper = np.array([h_max, s_max, v_max])
     mask = cv2.inRange(imgHSV, lower, upper)
